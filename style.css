@@ -144,15 +144,15 @@ body {
 }
 
 .side-photo.left {
-    left: -400px;
-    width: 250px;
-    height: 450px;
+    left: -450px;
+    width: 350px;
+    height: 550px;
 }
 
 .side-photo.right {
-    right: -400px;
-    width: 250px;
-    height: 450px;
+    right: -450px;
+    width: 350px;
+    height: 550px;
 }
 
 .container .text { z-index: 3; }
