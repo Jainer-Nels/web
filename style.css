@@ -6,11 +6,11 @@
     --background-color: #fff;
     --font-color: #000;
     --font-family: 'Amatic SC', cursive;
-    --icon-size: 20em;
+    --icon-size: 12em;
     --icon-color: #ff0000;
-    --title-size: 70px;
+    --title-size: 48px;
     --title-color: #fff;
-    --text-size: 50px;
+    --text-size: 28px;
     --text-color: #fff;
 }
 
@@ -21,7 +21,7 @@
 body {
     background: url(https://subtlepatterns.com/patterns/noise_lines.png);
     font-family: var(--font-family);
-    overflow: hidden;
+    overflow: auto;
     color: var(--font-color);
 }
 
@@ -36,14 +36,15 @@ body {
 
 .container {
     position: relative;
-    margin: 120px auto 0 auto;
-    width: 320px;
+    margin: 60px auto 0 auto;
+    width: calc(100% - 40px);
+    max-width: 420px;
 }
 
 .icon {
     display: block;
-    width: 320px;
-    height: 320px;
+    width: 220px;
+    height: 220px;
 }
 
 .open .icon {
@@ -165,13 +166,31 @@ body {
 /* Responsive: reduce size and offsets on small screens */
 @media (max-width: 600px) {
     .side-photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 8px;
-        box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        display: none;
     }
-    .side-photo.left { left: -120px; }
-    .side-photo.right { right: -120px; }
+    .container {
+        margin-top: 30px;
+        width: calc(100% - 24px);
+    }
+    .icon {
+        width: 160px;
+        height: 160px;
+    }
+    .icon .title {
+        margin-left: -70px;
+        margin-top: -55px;
+        font-size: 34px;
+    }
+    .text h1 { font-size: 22px; }
+    .text h2 { font-size: 16px; }
+    .text h3 { font-size: 14px; }
+}
+
+/* Extra small screens adjustments */
+@media (max-width: 380px) {
+    .icon { width: 140px; height: 140px; }
+    .icon .title { font-size: 30px; margin-left: -60px; margin-top: -48px; }
+    .text h1 { font-size: 20px; }
 }
 
 .open .text {
